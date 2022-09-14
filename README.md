@@ -1,2 +1,2 @@
 # intern
-Some notes of internship
+Some notes from internship
