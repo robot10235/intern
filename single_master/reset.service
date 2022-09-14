@@ -1,0 +1,10 @@
+[Unit]
+Description=recover from down
+After=mysql.service
+
+[Service]
+Type=forking
+ExecStart=/root/single_master/set_slave.sh
+
+[Install]
+WantedBy=multi-user.target

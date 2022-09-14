@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql
+  labels:
+    app: mysql
+data:
+  master.cnf: |
+    # Apply this config only on the master.
+    [mysqld]
+    log-bin
+    gtid_mode = on
+    enforce_gtid_consistency = 1
+    skip_slave_start=1
+    binlog_format=row
+  slave.cnf: |
+    # Apply this config only on slaves.
+    [mysqld]
+    super-read-only
+    gtid_mode = on
+    enforce_gtid_consistency = 1
+    skip_slave_start=1
+    binlog_format=row
+

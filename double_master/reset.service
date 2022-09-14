@@ -1,0 +1,10 @@
+[Unit]
+Description=recover from down
+After=mysql.service
+
+[Service]
+Type=forking
+ExecStart=/root/double_master/recover.sh
+
+[Install]
+WantedBy=multi-user.target

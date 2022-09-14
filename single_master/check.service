@@ -1,0 +1,11 @@
+[Unit]
+Description=check the network of the other server
+After=mysql.service
+
+[Service]
+Type=forking
+ExecStart=/root/single_master/check.sh
+TimeoutStartSec=0
+
+[Install]
+WantedBy=multi-user.target 

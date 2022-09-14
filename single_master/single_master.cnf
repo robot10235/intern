@@ -1,0 +1,10 @@
+[mysqld]
+server_id = 3
+master_info_repository = TABLE
+relay_log_info_repository = TABLE
+gtid_mode = on
+enforce_gtid_consistency = 1
+log-bin = mysql-bin
+skip_slave_start=1
+binlog_format = row
+log_slave_updates = ON
