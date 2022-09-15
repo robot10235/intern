@@ -1,2 +1,2 @@
 # intern
-Some notes from internship
+k8s docker mysql replication
